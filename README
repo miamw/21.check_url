@@ -1,0 +1,27 @@
+1.Software Dependence
+-Python is necessary. Check it with command "python -V". 
+
+2.Function of autofinder1.1
+-Fetch information from website:whatismyipadress.com automatically.
+
+3.Files framework
+-autofinder1.1.py	:source code in python
+-label.config		:config file to define which informations to fetch from whatismyipadress.com
+
+4.Usage
+~$python autofinder1.1.py [inputfile] ([outputfile]) ([-configfile])
+4.1 Only input file is necessary.Every line in input file is a ip address, be careful about blank characters.
+4.2 Default output file name will be the the input file name attached "_out.txt", like "inputfilename_out.txt".
+4.3 Default config file is the "label.config" under the same directory with file "autofinder1.1.py".
+4.4 The order of information fetched is based on the label name given in config file.
+4.5 Every line in the output file has format "ipadress['\t']infor1(['\t']infor2)". The separator is '\t', so you can copy and paste it to excel file easily.   
+
+5.Config file
+5.1 If you want assign a different config file, be careful the short line '-' in the command.
+5.2 Config file is composed with many lines. Each line is the label name in whatismyipaddress.com, including the colon ':'. Be careful the space ' ' beside the labels.
+5.3 If a line is start with '#', it is regarded as note. I recommend you keep the label names which you don't want remained in the config file but with a '#' before it.
+
+6.Contact
+Any question and suggestion:
+-Email: yuanhao@yahoo-inc.com
+-Yahoo!Message: zhu.yuanhao
